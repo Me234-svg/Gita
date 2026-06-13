@@ -1,5 +1,5 @@
 # Gita
-```html
+html
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
@@ -17,10 +17,10 @@
                         cyber: {
                             bg: '#070913',
                             card: 'rgba(15, 18, 36, 0.7)',
-                            primary: '#8b5cf6', // Violet
-                            secondary: '#ec4899', // Pink
-                            accent: '#eab308', // Gold
-                            cyan: '#06b6d4', // Cyan
+                            primary: '#8b5cf6', / Violet
+                            secondary: '#ec4899', / Pink
+                            accent: '#eab308', / Gold
+                            cyan: '#06b6d4', / Cyan
                         }
                     },
                     fontFamily: {
@@ -31,17 +31,17 @@
             }
         }
     </script>
-    <!-- Google Fonts -->
+    <-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
+    <-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <style>
+<style>
         body {
             background-color: #070913;
             overflow-x: hidden;
         }
-        /* Custom scrollbar */
+        / Custom scrollbar /
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -52,7 +52,7 @@
             background: #1e1b4b;
             border-radius: 3px;
         }
-        /* Neon glowing text & borders */
+        / Neon glowing text & borders */
         .neon-text-cyan {
             text-shadow: 0 0 10px rgba(6, 182, 212, 0.6), 0 0 20px rgba(6, 182, 212, 0.3);
         }
@@ -67,24 +67,22 @@
             box-shadow: 0 0 15px rgba(234, 179, 8, 0.15);
             border: 1px solid rgba(234, 179, 8, 0.3);
         }
-        /* Page flip & fade transitions */
+        / Page flip & fade transitions */
         .slide-transition {
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
     </style>
 </head>
 <body class="text-slate-100 font-sans min-h-screen flex flex-col justify-between">
-
-    <!-- BACKGROUND GRAPHICS (SANSKRIT MANDALA & NEON ORBS) -->
+<-- BACKGROUND GRAPHICS (SANSKRIT MANDALA & NEON ORBS) -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div class="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full bg-violet-900/15 blur-[120px]"></div>
         <div class="absolute bottom-[-25%] right-[-10%] w-[700px] h-[700px] rounded-full bg-pink-900/15 blur-[150px]"></div>
         <div class="absolute top-[40%] right-[10%] w-[300px] h-[300px] rounded-full bg-cyan-900/10 blur-[100px]"></div>
-        <!-- Grid overlay -->
+        <-- Grid overlay -->
         <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
     </div>
-
-    <!-- HEADER / NAVIGATION -->
+<-- HEADER / NAVIGATION -->
     <header class="relative z-10 w-full px-6 py-4 flex justify-between items-center bg-cyber-bg/60 backdrop-blur-md border-b border-white/5">
         <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyber-primary to-cyber-secondary flex items-center justify-center shadow-lg">
@@ -96,7 +94,7 @@
             </div>
         </div>
         
-        <!-- Quick Stats / Controls -->
+<-- Quick Stats / Controls -->
         <div class="flex items-center gap-4">
             <button id="toggle-sidebar" class="bg-violet-950/40 hover:bg-violet-900/40 border border-violet-500/30 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 text-violet-300 transition-all">
                 <i class="fa-solid fa-robot"></i> Ask Krishna AI
@@ -106,22 +104,18 @@
             </button>
         </div>
     </header>
-
-    <!-- MAIN PRESENTATION AREA -->
+<-- MAIN PRESENTATION AREA -->
     <main class="relative z-10 flex-1 w-full max-w-7xl mx-auto px-4 md:px-6 py-6 flex flex-col md:flex-row gap-6 items-stretch">
         
-        <!-- SLIDE CONTENT WINDOW -->
+<-- SLIDE CONTENT WINDOW -->
         <div class="flex-1 flex flex-col justify-between bg-cyber-card backdrop-blur-xl rounded-2xl neon-border overflow-hidden relative min-h-[550px] md:min-h-[600px]">
-            
-            <!-- Slide Progress indicator bar -->
+                <-- Slide Progress indicator bar -->
             <div class="absolute top-0 left-0 h-1 bg-gradient-to-r from-cyan-500 via-violet-500 to-pink-500 transition-all duration-500" id="progress-bar" style="width: 10%;"></div>
-
-            <!-- SLIDE WRAPPER -->
+<-- SLIDE WRAPPER -->
             <div class="flex-1 p-6 md:p-10 flex flex-col justify-center overflow-y-auto" id="slide-container">
-                <!-- Slide templates will be injected here dynamically -->
+                <-- Slide templates will be injected here dynamically -->
             </div>
-
-            <!-- CONTROLS & META FOOTER -->
+ <-- CONTROLS & META FOOTER -->
             <div class="border-t border-white/5 bg-slate-950/50 p-4 flex flex-col sm:flex-row justify-between items-center gap-4">
                 <div class="flex items-center gap-2">
                     <span class="text-xs bg-slate-900 border border-white/10 text-slate-400 px-2.5 py-1 rounded-full font-mono" id="slide-counter">SLIDE 01 / 10</span>
@@ -130,12 +124,11 @@
                     </button>
                 </div>
 
-                <!-- Slide Navigation Dots -->
+ <-- Slide Navigation Dots -->
                 <div class="flex items-center gap-1.5" id="nav-dots">
-                    <!-- Dots generated here -->
+                    <-- Dots generated here -->
                 </div>
-
-                <!-- Action Nav buttons -->
+ <-- Action Nav buttons -->
                 <div class="flex items-center gap-3">
                     <button id="prev-btn" class="w-10 h-10 rounded-xl bg-slate-900 border border-white/10 hover:border-violet-500/40 text-slate-300 hover:text-white flex items-center justify-center transition">
                         <i class="fa-solid fa-arrow-left"></i>
@@ -146,11 +139,10 @@
                 </div>
             </div>
         </div>
-
-        <!-- SIDEBAR: "ASK KRISHNA AI CHAT" & TEXT RESOURCE -->
+ <-- SIDEBAR: "ASK KRISHNA AI CHAT" & TEXT RESOURCE -->
         <aside id="ai-sidebar" class="w-full md:w-[380px] bg-cyber-card backdrop-blur-xl rounded-2xl border border-white/10 p-5 flex flex-col justify-between hidden md:flex transition-all">
             <div class="flex flex-col h-full">
-                <!-- Sidebar Header -->
+                <-- Sidebar Header -->
                 <div class="flex justify-between items-center pb-4 border-b border-white/5 mb-4">
                     <div class="flex items-center gap-2">
                         <div class="w-8 h-8 rounded-lg bg-yellow-500/20 border border-yellow-500/40 flex items-center justify-center">
@@ -161,13 +153,13 @@
                             <p class="text-[10px] text-slate-400">Ask modern dilemmas, get Gita wisdom</p>
                         </div>
                     </div>
-                    <!-- Status Indicator -->
+                    <-- Status Indicator -->
                     <span class="inline-flex items-center gap-1 text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/20">
                         <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Active
                     </span>
                 </div>
 
-                <!-- Dilemmas / Quick Prompts -->
+ <-- Dilemmas / Quick Prompts -->
                 <div id="quick-prompts" class="mb-4">
                     <p class="text-[11px] text-slate-400 uppercase tracking-wider font-bold mb-2">🔥 Common Gen Z Dilemmas:</p>
                     <div class="grid grid-cols-1 gap-1.5">
@@ -182,17 +174,15 @@
                         </button>
                     </div>
                 </div>
-
-                <!-- Chat Messages Window -->
+<-- Chat Messages Window -->
                 <div id="chat-messages" class="flex-1 min-h-[150px] max-h-[250px] md:max-h-none overflow-y-auto mb-4 p-3 bg-slate-950/40 rounded-xl border border-white/5 flex flex-col gap-3">
-                    <!-- Initial Welcome Message -->
+                    <-- Initial Welcome Message -->
                     <div class="text-xs text-slate-400 bg-slate-900/40 p-2.5 rounded-lg border border-white/5">
                         <span class="font-bold text-yellow-400"><i class="fa-solid fa-om mr-1"></i> Arjuna, ask your question:</span>
                         "Tell me your current challenge, dilemma or doubt, and I will show you how to apply the wisdom of the Gita to solve it."
                     </div>
                 </div>
-
-                <!-- Input box -->
+  <-- Input box -->
                 <div class="relative">
                     <input type="text" id="chat-input" placeholder="Type your modern dilemma here..." class="w-full bg-slate-900/60 border border-white/10 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-violet-500 transition-all pr-12 text-slate-200">
                     <button id="send-chat-btn" class="absolute right-2 top-2 w-8 h-8 rounded-lg bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-500 hover:to-pink-500 flex items-center justify-center text-white transition shadow-md">
@@ -203,13 +193,12 @@
         </aside>
     </main>
 
-    <!-- AUDIO PLAYER / VOICE CAPABILITY NOTIF (Bottom left float) -->
+  <-- AUDIO PLAYER / VOICE CAPABILITY NOTIF (Bottom left float) -->
     <div id="audio-notifier" class="fixed bottom-6 left-6 z-20 bg-slate-950/80 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 flex items-center gap-2 shadow-lg max-w-sm hidden transition-all duration-300">
         <div class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></div>
         <span class="text-[10px] text-slate-300 font-mono" id="audio-text">Synthesizing shloka recitation...</span>
     </div>
-
-    <!-- MAIN DATA CONFIGURATION FOR SLIDES -->
+<-- MAIN DATA CONFIGURATION FOR SLIDES -->
     <script>
         const SLIDE_DATA = [
             {
